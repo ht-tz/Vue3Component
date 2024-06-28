@@ -2,15 +2,31 @@
  * @Author: htz
  * @Date: 2024-06-27 16:10:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-06-28 00:22:32
+ * @LastEditTime: 2024-06-28 12:48:43
  * @Description:  vite配置
  */
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+// import ViteCompression from 'vite-plugin-compression';
+import brotli from 'rollup-plugin-brotli';
 import { fileURLToPath } from 'url';
+import { manualChunksPlugin } from 'vite-plugin-webpackchunkname';
+
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [vue()],
+	plugins: [
+		vue(),
+		brotli({}), // br压缩的算法， 比gzip更有优势
+		manualChunksPlugin()
+	],
+	css: {
+		// css预=处理器
+		preprocessorOptions: {
+			less: {
+				javascriptEnabled: true // 允许js语法
+			}
+		}
+	},
 	build: {
 		sourcemap: false,
 		// 默认是五百

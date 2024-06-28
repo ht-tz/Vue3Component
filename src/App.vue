@@ -1,32 +1,78 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-</script>
-
 <template>
-	<div>
-		<a href="https://vitejs.dev" target="_blank">
-			<img src="/vite.svg" class="logo" alt="Vite logo" />
-		</a>
-		<a href="https://vuejs.org/" target="_blank">
-			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-		</a>
+	<div class="content">
+		<div class="aside">
+			<div class="menu">
+				<div v-for="(item, index) in menus" :key="item.id + index" class="menu-item" @click="menuClick(item)">
+					<span class="name">{{ item.name }}</span>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<router-view></router-view>
+		</div>
 	</div>
-	<HelloWorld msg="Vite + Vue" />
 </template>
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+const menus = ref([]);
 
-<style scoped>
-.logo {
-  padding: 1.5em;
-  height: 6em;
-  transition: filter 300ms;
-  will-change: filter;
+const router = useRouter();
+menus.value = [
+	{
+		name: '简单虚拟列表',
+		id: 1,
+		path: '/home'
+	},
+	{
+		name: '不定高虚拟列表',
+		id: 2,
+		path: '/ex'
+	}
+];
+
+function menuClick(item) {
+	const path = item.path;
+	router.push(path);
 }
+</script>
+<style lang="less" scoped>
+.content {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+  .aside {
+    position: relative;
+    width: 240px;
+    height: 100%;
+    border-right: 1px solid #ccc;
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+    .menu {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      .menu-item {
+        width: 100%;
+        height: 48px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 30px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: burlywood;
+        }
+      }
+    }
+  }
+
+  .main {
+    margin: 0 36px;
+    width: calc(100% - 240px);
+  }
 }
 </style>
