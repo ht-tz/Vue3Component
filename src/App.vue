@@ -38,41 +38,41 @@ function menuClick(item) {
 </script>
 <style lang="less" scoped>
 .content {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
 
-  .aside {
-    position: relative;
-    width: 240px;
-    height: 100%;
-    border-right: 1px solid #ccc;
+	.aside {
+		position: relative;
+		width: 240px;
+		height: 100%;
+		border-right: 1px solid #ccc;
 
-    .menu {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+		.menu {
+			position: absolute;
+			width: 100%;
+			height: 100%;
 
-      .menu-item {
-        width: 100%;
-        height: 48px;
-        font-size: 18px;
-        text-align: center;
-        font-weight: 600;
-        line-height: 30px;
-        cursor: pointer;
+			.menu-item {
+				width: 100%;
+				height: 48px;
+				font-size: 18px;
+				text-align: center;
+				font-weight: 600;
+				line-height: 30px;
+				cursor: pointer;
 
-        &:hover {
-          background-color: burlywood;
-        }
-      }
-    }
-  }
+				&:hover {
+					background-color: burlywood;
+				}
+			}
+		}
+	}
 
-  .main {
-    margin: 0 36px;
-    width: calc(100% - 240px);
-  }
+	.main {
+		margin: 0 36px;
+		width: calc(100% - 240px);
+	}
 }
 </style>

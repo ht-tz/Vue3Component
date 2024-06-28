@@ -23,6 +23,7 @@ module.exports = {
 	ignoreFiles: ['**/*.js', '/**/*.less', '/*.jsx', '**/.tsx', '**/*.ts', '/*.json', '**/.md', '**/*.yaml'],
 	// 自定义配置规则
 	rules: {
+		indentation: 'tab',
 		// 便于配置变量 关闭未知属性检测
 		'property-no-unknown': null,
 		// 指定类选择器的模式

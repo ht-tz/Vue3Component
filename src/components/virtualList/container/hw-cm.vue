@@ -9,10 +9,10 @@ import vlListIndexVue from '@/components/virtualList/ht-virtal.vue';
 
 <style lang="less" scoped>
 .container-list {
-  position: relative;
-  margin: 0 auto;
-  width: 800px;
-  height: 800px;
-  text-align: center;
+	position: relative;
+	margin: 0 augitto;
+	width: 800px;
+	height: 800px;
+	text-align: center;
 }
 </style>

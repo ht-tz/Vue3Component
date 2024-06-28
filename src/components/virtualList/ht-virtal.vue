@@ -183,60 +183,60 @@ onMounted(() => {
 
 <style lang="less" scoped>
 .outContainer {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .scrollerContainer {
-  position: relative;
-  overflow: auto;
-  width: 100%;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
+	position: relative;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
 }
 
 .plildDom {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
 }
 
 .contentList {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
 }
 
 .item {
-  height: calc(v-bind(itemHeight) * 1px);
-  line-height: calc(v-bind(itemHeight) * 1px);
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-  // 避免超出设置的高度
-  box-sizing: border-box;
+	height: calc(v-bind(itemHeight) * 1px);
+	line-height: calc(v-bind(itemHeight) * 1px);
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	// 避免超出设置的高度
+	box-sizing: border-box;
 
-  &:nth-child(odd) {
-    background-color: aqua;
-  }
+	&:nth-child(odd) {
+		background-color: aqua;
+	}
 
-  &:nth-child(even) {
-    background-color: #96d57d;
-  }
+	&:nth-child(even) {
+		background-color: #96d57d;
+	}
 
-  &:last-child {
-    border-bottom: none;
-  }
+	&:last-child {
+		border-bottom: none;
+	}
 }
 
 .loadingDiv {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  color: red;
-  font-weight: bold;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	color: red;
+	font-weight: bold;
 }
 </style>
