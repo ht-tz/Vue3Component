@@ -13,7 +13,7 @@ insert_final_newline = true
 # 匹配 JavaScript 文件
 [*.js]
 # 使用空格缩进
-indent_style = space
+indent_style = tab
 # 缩进大小为 4
 indent_size = 4
 
