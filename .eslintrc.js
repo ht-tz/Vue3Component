@@ -53,5 +53,13 @@ module.exports = {
 	// 使用的插件
 	plugins: ['vue', '@typescript-eslint'],
 	// 自定义规则
-	rules: { 'prettier/prettier': 'error' }
+	rules: {
+		'prettier/prettier': [
+			'error',
+			{
+				useTabs: true,
+				tabWidth: 4
+			}
+		]
+	}
 };
