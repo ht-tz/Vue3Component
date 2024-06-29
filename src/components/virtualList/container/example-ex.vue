@@ -1,12 +1,11 @@
 <template>
 	<div class="container-list">
-		<!-- <nextVlList id="id" :item-count="10000" :list-data="listData" :item-height="50" :width="800" :height="800"> -->
-		<!-- </nextVlList> -->
+		<dynamitic></dynamitic>
 	</div>
 </template>
 <script setup>
 // import { ref } from 'vue';
-// import nextVlList from '../views/next-vl-list.vue';
+import dynamitic from '../view/dynamtic-list.vue';
 
 // const listData = ref([]);
 // for (let i = 0; i < 10000; i++) {

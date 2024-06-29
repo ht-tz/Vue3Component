@@ -60,6 +60,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 19.1.0
         version: 19.1.0
+      '@types/mockjs':
+        specifier: ^1.0.10
+        version: 1.0.10
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.14.1
         version: 7.14.1(@typescript-eslint/parser@7.14.1(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0)(typescript@5.5.2)
@@ -87,9 +90,15 @@ importers:
       husky:
         specifier: ^9.0.11
         version: 9.0.11
+      install:
+        specifier: ^0.13.0
+        version: 0.13.0
       less:
         specifier: ^4.2.0
         version: 4.2.0
+      mockjs:
+        specifier: ^1.1.0
+        version: 1.1.0
       prettier:
         specifier: 3.2.5
         version: 3.2.5
@@ -520,6 +529,9 @@ packages:
 
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
+
+  '@types/mockjs@1.0.10':
+    resolution: {integrity: sha512-SXgrhajHG7boLv6oU93CcmdDm0HYRiceuz6b+7z+/2lCJPTWDv0V5YiwFHT2ejE4bQqgSXQiVPQYPWv7LGsK1g==}
 
   '@types/node@20.14.9':
     resolution: {integrity: sha512-06OCtnTXtWOZBJlRApleWndH4JsRVs1pDCc8dLSQp+7PpUpX3ePdHyeNSFTeSe7FtKyQkrlPvHwJOW3SLd8Oyg==}
@@ -1383,6 +1395,10 @@ packages:
     resolution: {integrity: sha512-QAgPDQMEgrDssk1XiwwHoOGYF9BAbUcc1+j+FhEvaOt8/cKRqyLn0U5qA6F74fGhTMGxf92pOvPBeh29jQJDTQ==}
     engines: {node: '>=12.0.0'}
 
+  install@0.13.0:
+    resolution: {integrity: sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==}
+    engines: {node: '>= 0.10'}
+
   is-arrayish@0.2.1:
     resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
 
@@ -1681,6 +1697,10 @@ packages:
 
   mkdirp@0.5.6:
     resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
+    hasBin: true
+
+  mockjs@1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}
     hasBin: true
 
   ms@2.1.2:
@@ -2799,6 +2819,8 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
+  '@types/mockjs@1.0.10': {}
+
   '@types/node@20.14.9':
     dependencies:
       undici-types: 5.26.5
@@ -3779,6 +3801,8 @@ snapshots:
       through: 2.3.8
       wrap-ansi: 7.0.0
 
+  install@0.13.0: {}
+
   is-arrayish@0.2.1: {}
 
   is-core-module@2.14.0:
@@ -4045,6 +4069,10 @@ snapshots:
   mkdirp@0.5.6:
     dependencies:
       minimist: 1.2.8
+
+  mockjs@1.1.0:
+    dependencies:
+      commander: 12.1.0
 
   ms@2.1.2: {}
 

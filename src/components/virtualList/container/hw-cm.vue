@@ -4,7 +4,7 @@
 	</div>
 </template>
 <script setup>
-import vlListIndexVue from '@/components/virtualList/ht-virtal.vue';
+import vlListIndexVue from '../view/ht-virtal.vue';
 </script>
 
 <style lang="less" scoped>
